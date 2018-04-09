@@ -1,6 +1,6 @@
 ------- Create Table ----------
 
-sqlcmd.exe -S prashantvikramsingh.database.windows.net -d Zillow -U "Username" -P "Password" -I -Q "
+sqlcmd.exe -S prashantvikramsingh.database.windows.net -d Zillow -U Username -P Password -I -Q "
 	CREATE TABLE ZillowData
 	(		
 		parcelid Bigint,
@@ -67,7 +67,7 @@ sqlcmd.exe -S prashantvikramsingh.database.windows.net -d Zillow -U "Username" -
 
 ------- Create Function ----------
 
-sqlcmd.exe -S prashantvikramsingh.database.windows.net -d Zillow -U "Username" -P "Password" -I -Q "
+sqlcmd.exe -S prashantvikramsingh.database.windows.net -d Zillow -U Username -P Password -I -Q "
 	create function distance(@latitude float, @longitude float)
 	returns TABLE
 	as
@@ -87,12 +87,12 @@ sqlcmd.exe -S prashantvikramsingh.database.windows.net -d Zillow -U "Username" -
 
 ------- Bulk Loading ----------
 
-bcp ZillowData in C:\Users\Prashant\ADS_Assignment2\after_wrangle.csv -S prashantvikramsingh.database.windows.net -d Zillow -U "Username" -P "Password" -q -c -t','
+bcp ZillowData in C:\Users\Prashant\ADS_Assignment2\after_wrangle.csv -S prashantvikramsingh.database.windows.net -d Zillow -U Username -P Password -q -c -t','
 
 
 ------- Sample Output ----------
 
-sqlcmd.exe -S prashantvikramsingh.database.windows.net -d Zillow -U "Username" -P "Password" -I -Q "SELECT top 10 parcelid, latitude, longitude FROM ZillowData;"
+sqlcmd.exe -S prashantvikramsingh.database.windows.net -d Zillow -U Username -P Password -I -Q "SELECT top 10 parcelid, latitude, longitude FROM ZillowData;"
 
 
 
