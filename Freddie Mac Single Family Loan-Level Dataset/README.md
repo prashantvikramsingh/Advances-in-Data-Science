@@ -30,13 +30,13 @@
   - Execute docker commit 'ID received from above code' team6midterm_part2
 - Execute docker run -p 8888:8888 team6midterm_part2 /bin/bash -c 'jupyter notebook --no-browser --ip=* --allow-root'
 
-## Fiile contains:
-- part 1 
-- DataIngestion_Part1.py this file is for data injestion 
-- EDA_Part1.ipynb is for EDA
+## File contents:
+- Part 1 
+   - DataIngestion_Part1.py this file is for Data Injestion 
+   - EDA_Part1.ipynb is for Exploratory Data Analysis
 
-- PART 2
-- Prediction_algos is for algo prediction
-- Classification_2 is for classification. 
+- Part 2
+   - Prediction_algos is for Prediction ipython notebooks
+   - Classification_2 is for Classification ipython notebooks. 
 
-- In python notebook need to run each cell sequentially . also enter the year and quarter for prediction 
+- In ipython notebook each cell needs to be run sequentially and the year and quarter needs to be entered for getting a Prediction 
