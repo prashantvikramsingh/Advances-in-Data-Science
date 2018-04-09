@@ -17,7 +17,7 @@ def api_article(articleid):
 
 @app.route('/sql/<lat>/<long>')	
 def api_sql(lat,long):
-	cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=prashantvikramsingh.database.windows.net;DATABASE=Zillow;UID=prashant;PWD=Pvs758993@')
+	cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=prashantvikramsingh.database.windows.net;DATABASE=Zillow;UID="Username";PWD="Password"')
 	cursor = cnxn.cursor()
 	cursor.execute("SELECT top 10 * FROM [dbo].[distance] ("+lat+","+long+") order by distance")
 	rows = cursor.fetchall()
